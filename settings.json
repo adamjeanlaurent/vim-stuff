@@ -1,20 +1,29 @@
 
-  "vim.vimrc.enable": true,
-  "vim.vimrc.path": "$HOME/.vimrc",
-  "vim.leader": "<Space>",  
-  "vim.useSystemClipboard": true,
-  "vim.normalModeKeyBindingsNonRecursive": [
-      // tab navigation
-       { "before": ["<S-h>"], "commands": [":bprevious"] },
-       { "before": ["<S-l>"], "commands": [":bnext"] },
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "$HOME/.vimrc",
+    "vim.leader": "<Space>",  
+    "vim.useSystemClipboard": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // tab navigation
+         { "before": ["<S-h>"], "commands": [":bprevious"] },
+         { "before": ["<S-l>"], "commands": [":bnext"] },
 
-       // splitting windows
-       { "before": ["leader", "v"], "commands": [":vsplit"] },
-       { "before": ["leader", "s"], "commands": [":split"] },
+         // splitting windows
+         { "before": ["leader", "v"], "commands": [":vsplit"] },
+         { "before": ["leader", "s"], "commands": [":split"] },
 
-       // window navigation
-       { "before": ["leader", "h"], "commands": ["workbench.action.focusLeftGroup"] },
-       { "before": ["leader", "j"], "commands": ["workbench.action.focusBelowGroup"] },
-       { "before": ["leader", "k"], "commands": ["workbench.action.focusAboveGroup"] },
-       { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] },
-  ],
+         // window navigation
+         { "before": ["leader", "h"], "commands": ["workbench.action.focusLeftGroup"] },
+         { "before": ["leader", "j"], "commands": ["workbench.action.focusBelowGroup"] },
+         { "before": ["leader", "k"], "commands": ["workbench.action.focusAboveGroup"] },
+         { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] },
+
+         // comment line
+         { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] },
+
+         // go to definiton
+         { "before": ["leader", "d"], "commands": ["editor.action.revealDefinition"] },
+    
+         // close file
+         { "before": ["leader", "f"], "commands": ["workbench.action.closeActiveEditor"] }
+    ],
