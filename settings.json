@@ -1,4 +1,3 @@
-
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "$HOME/.vimrc",
     "vim.leader": "<Space>",  
@@ -25,5 +24,8 @@
          { "before": ["leader", "d"], "commands": ["editor.action.revealDefinition"] },
     
          // close file
-         { "before": ["leader", "f"], "commands": ["workbench.action.closeActiveEditor"] }
+         { "before": ["leader", "f"], "commands": ["workbench.action.closeActiveEditor"] },
+
+         // peek return type
+         { "before": ["leader", "p"], "commands": ["editor.action.showHover"] }
     ],
