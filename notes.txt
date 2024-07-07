@@ -1,0 +1,84 @@
+Vim Motions
+
+Left off at Lesson 5.0
+
+Operator + Motion:
+    d      - is the delete operator.
+    motion - is what the operator will operate on (listed below).
+
+Anatomy of a Motion: Command + Count + Motion
+
+Using count for a Motion:
+Number + motion will do it that many times
+
+Commands:
+1. h = left
+2. j = down
+3. k = up
+4. l = right
+5. x = delete char where cursor is
+6. d = delete operator 
+    1. dw = delete until the start of next word
+    2. de = delete to the end of the current word
+    3. d$ = delete to the end of the line
+    4. d5w = delete 5 words
+    5. dd = delete line
+7. i = insert mode
+8. Shift+a = append to end of line
+9. 0 = move to start of the line
+10. w = move to next word (right)
+11. e = move to end of word (right)
+12. u = undo
+13. U = return whole line to original  state
+14. CTRL-R = redo
+15. p = put, puts what’s in your register  (if it’s a line, then below the cursor, if it’s a char, then to the right of the cursor)
+16. r = replace operator
+    1. r{any char} replaces where cursor is with that char
+17. c = change operator
+    1. ce = delete rest of word from where cursor is, and puts you in insert mode
+    2. cc = deletes the whole line and put you in insert mode
+    3. Actually uses all the same motions as the delete command
+18. G = move to bottom of the file
+19. gg = move to the start of the file
+20. {Number} G = move cursor the {Number} line
+21. / {searchTerm} = take you bottom direction to the next occurrence of {searchTerm}, wraps after it hits the end. Essentially this if ctr+f. Hit n afterwards, to move to next occurrence. N to go in opposite  direction
+22. % = moves cursor to match (, {, [, ), }, ]
+23. :s/old/new/flag = Substitute, this seems like a find and replace
+    1. Flags
+        1. g = global, changes every occurrence in the line
+        2. gc = whole file
+24. v = visual mode
+25. y = yank. Seems like copy, enter visual mode, highlight some stuff, and press y to yank. This put it in your buffer and you can write it with p for example.
+    1. yw = yank word (doesn’t need to be in visual mode)
+    2. yy = yank whole line.
+26. o = Open. Puts a newline under your current line, moves you there, and put you in insert mode
+    1. O = Same thing, except it puts a line above your current line
+27. a = append. Puts you in insert mode and move the character once to the right.
+28. R = replace multiple characters. R{characters} is same as r but multiple chars.
+29. $ = move to the end of the line
+30. { = go to last block of code (great for navigating!)
+31. } = go to next block of code (great for navigating!)
+32. V = visual line mode
+33. :{line number} = move to line number
+34. ^ = brings you to first letter in the line
+35. W = w but ignores punctuation 
+36. B = b but ignores punctuation 
+37. t = goto in line t {char} puts you at before char in current line. Move to next instance with ;
+38. f = same as t but puts you on the line. Move to next instance with ;
+39. D = same as d$?
+40. C = same as c$?
+41. * = toggles between instances of word your cursor is on in file
+42. zz = puts the current line in the middle
+43. I = puts you in insert mode at the beginning of the line
+44. ~ = swaps case of where cursor is
+45. . = re-runs the last command you did
+46. >> = indent
+47. << = unindent
+48. Marcos
+    1. Type q to start recording
+    2. Type a letter to save the macro to that char
+    3. Do a bunch of commands
+    4. Type q to end recording
+    5. Type @{letter} To replay macro
+    6. {number} letter To replay Macro for number lines
+ 
